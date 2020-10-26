@@ -1,5 +1,8 @@
 package com.mlh.study.week3;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 /**
  * @ClassName Circle
  * @Description TODO
@@ -7,7 +10,9 @@ package com.mlh.study.week3;
  * @Date 2020/10/19
  **/
 
+@Getter
 public class Circle extends Point {
+
     private int r;
     public Circle(){
         System.out.println("圆被初始化了");
@@ -25,4 +30,10 @@ public class Circle extends Point {
     public double getArea(){
         return Math.PI * r * r;
     }
+
+    @Override
+    public String toString() {
+        return "(圆心为(" + x +"," + y +"),半径为" + r +")";
+    }
+
 }
